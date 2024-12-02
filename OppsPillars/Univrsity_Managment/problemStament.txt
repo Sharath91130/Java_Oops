@@ -1,0 +1,54 @@
+HomeWork:
+Problem Statement:
+"University Student Management System"
+
+Scenario:
+You are tasked with designing a University Student Management System that models various entities within a university, such as students, professors, and departments, using Object-Oriented Programming (OOP) principles. The goal is to create a system that integrates multiple key OOP concepts such as encapsulation, inheritance, polymorphism, and abstraction while incorporating additional Java features like static, final, aggregation, composition, and method overloading.
+
+Requirements for the System:
+Base Class - Person:
+Create a class named Person that acts as a base class for all entities.
+It should have private attributes such as name, age, and ID. These fields should be encapsulated using getters and setters to control access.
+Implement a method getDetails() to display the person’s basic details.
+Overload the getDetails() method to allow showing different formats of details (with or without ID).
+This class should also include an abstract method performDuties() which will be overridden in the derived classes.
+
+Derived Classes - Student and Professor:
+
+Create two subclasses: Student and Professor, both of which should inherit from the Person class.
+The Student class should have attributes such as rollNumber and an Address object (using composition). The Address cannot exist independently of the Student.
+The Professor class should include attributes like department and subjectsTaught. A Professor can belong to a Department (using aggregation).
+Both classes must implement the performDuties() method differently to show specific actions for students (like studying) and professors (like teaching).
+Override the getDetails() method in both Student and Professor classes to display their specific information.
+
+
+
+
+Static and Final Usage:
+
+Create a University class that holds a static variable universityName, which is shared across all students and professors. Also, track the total number of students using a static variable.
+Implement static methods like addStudent() and getUniversityDetails() to manage the total number of students and display the university’s details.
+Use the final keyword to declare the University class or certain methods, preventing them from being overridden in future extensions.
+
+
+Relationship Between Classes:
+
+Use composition to define that a Student has an Address. The Address class should have fields such as city and pincode.
+Use aggregation to show that a Department contains multiple Professor objects. A department can exist without its professors, but the professors are linked to a specific department.
+
+
+Use Polymorphism:
+Override the performDuties() method in each subclass to display the unique behavior of students and professors.
+Overload the getDetails() method to show flexibility in how details are displayed for the Person.
+
+
+
+Use Static and Final:
+Implement static variables in the University class for the university name and total student count. Also, use a static method to update and display this information.
+Use the final keyword to prevent certain classes or methods from being overridden.
+
+
+Establish Aggregation and Composition:
+
+Set up a composition relationship between Student and Address, where each student has one address.
+Set up an aggregation relationship between Department and Professor, where a department can have multiple professors.
